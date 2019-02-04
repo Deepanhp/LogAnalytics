@@ -1,0 +1,20 @@
+<h1>Log Analytics</h1>
+
+<table>
+  <tr>
+    <th>Successful Requests</th>
+    <th>Largest Request</th>
+    <th>Total Requests</th>
+    <th>Peak hour</th>
+  </tr>
+ 
+  <tr>
+    <td><%= @suc_req %></td>
+    <td><%= "#{@lar_req.values[0]} - #{@lar_req.keys[0]} kb" %></td>
+    <td><%= @tota_req %></td>
+
+    <td><%= "#{@max_hour_req[0].split[0]} from #{@max_hour_req[0].split[1]} to #{@max_hour_req[0].split[1].to_i+1} - #{@max_hour_req[1]} requests".html_safe %></td>
+  </tr>
+</table>
+
+

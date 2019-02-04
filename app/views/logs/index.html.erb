@@ -1,0 +1,15 @@
+<h1>Log Files</h1>
+
+<table>
+  <tr>
+    <th>S.No</th>
+    <th>File Name</th>
+  </tr>
+ 
+<% @response.each_with_index do |i,v| %>
+  <tr>
+    <td><%= v+1 %></td>
+    <td><%= link_to i, logs_show_path(file: i)%></td>
+  </tr>
+<% end %>
+</table>
